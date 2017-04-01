@@ -1,0 +1,83 @@
+body
+  height 100%
+.nav-tier-1
+  ul
+    list-style-type none
+    margin 0
+    padding 0
+    overflow hidden
+    background-color #333
+    height 50px
+  li
+    float left
+    display block
+    width 100px
+    text-align center
+    padding 15px 5px 20px 5px
+    a
+      color white
+      text-align center
+      text-decoration none
+      text-transform uppercase
+      font-size 14px
+  li a:active
+    background #4c4c4c
+   li:hover
+    background #666
+    cursor pointer
+  .company-name
+    float right
+    font-size 18px
+    text-transform uppercase
+    color: beige
+    padding: 10px
+.tier-2
+  width 100%
+  height 50px
+  background #4c4c4c
+  display flex
+  flex-direction row
+  justify-content flex-end
+.button-app
+  width 120px
+  height 30px
+  color #fff
+  background #666
+  text-transform uppercase
+  font-size 13px
+  box-shadow 0 0 3px #4c4c4c
+  border 1px solid #4c4c4c
+::-webkit-input-placeholder
+  color white
+.search-bar
+  margin 8px 20px 8px 20px
+  .search
+    padding 5px
+    background #b2b2b2
+    border 1px solid #666
+    font-size 15px
+    height 30px
+    color white
+.wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.loader {
+  color: beige;
+  margin: 8em auto;
+}
+
+
+
+
+
+////////////////////////////////////
+///////Other Stylus Documents////////
+////////////////////////////////////
+
+@require 'components/*'

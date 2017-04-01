@@ -29,6 +29,7 @@
     "ember-cli-release": "^0.2.9",
     "ember-cli-shims": "^1.0.2",
     "ember-cli-sri": "^2.1.0",
+    "ember-cli-stylus": "1.0.7",
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "^2.11.0",
@@ -42,5 +43,8 @@
   "engines": {
     "node": ">= 0.12.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "stylus": "^0.54.5"
+  }
 }
