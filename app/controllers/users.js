@@ -13,6 +13,10 @@ export default Ember.Controller.extend({
         this.set('userList', res);
       })
       this.set('addUser', false);
+    },
+    addUser: function() {
+      this.set('viewUsers', false);
+      this.set('addUser', true);
     }
   }
 
