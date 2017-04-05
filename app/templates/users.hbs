@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-2">
+    <div class="left-panel">
+      <div class="panel-items" {{action 'addUser'}}>Add Contact</div>
+      <div class="panel-items" {{action 'viewAllUsers'}}>List Contacts</div>
+    </div>
+  </div>
+  <div class="col-md-10">
+    {{#if addUser}}
+      {{add-user-form}}
+    {{/if}}
+    {{#if viewUsers}}
+      {{user-detail-view model=userList}}
+    {{/if}}
+  </div>
+</div>

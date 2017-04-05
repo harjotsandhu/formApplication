@@ -1,1 +1,17 @@
-{{yield}}
+{{#each model as |user|}}
+  <div class="user-box">
+    <div class="icon">  </div>
+    <div class="name">
+      {{user.firstname}} " " {{user.lastname}}
+    </div>
+    <div class="email">
+      {{user.email}}
+    </div>
+    <div class="phone">
+      {{user.phone}}
+    </div>
+    <div class="status">
+      {{user.status}}
+    </div>
+  </div>
+{{/each}}
