@@ -1,1 +1,27 @@
-{{yield}}
+<div class="user-container">
+  {{#each model as |user|}}
+    <div class="user-box">
+      <div class="edit-icon" {{action 'viewDetail' model}}>
+          {{#link-to 'user' user}}{{fa-icon "fa-edit"}}{{/link-to}}
+      </div>
+      <div class="icon">
+        {{fa-icon "fa-user-circle-o"}}
+      </div>
+      <div class="name">
+        {{user.firstname}} " " {{user.lastname}}
+      </div>
+      <div class="email">
+        {{user.email}}
+      </div>
+      <div class="phone">
+        {{user.phone}}
+      </div>
+      <div class="status">
+        {{user.status}}
+      </div>
+      <div class="delete" {{action 'delete' user}}>
+        {{fa-icon "fa-trash"}}
+      </div>
+    </div>
+  {{/each}}
+</div>
