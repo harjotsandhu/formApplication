@@ -14,12 +14,12 @@
     </div>
     <div class="form-group">
       <label for="email">Email address:</label>
-      {{input type=text class="form-control" value=newUser.email}} {{#if email}}YO {{/if}}
+      {{input type=text class="form-control" value=newUser.email}}
     </div>
     <div class="checkbox">
       <label>{{input type="checkbox" checked=newUser.status}}Status</label>
     </div>
-    <button type="submit" class="btn btn-default" {{action 'addUser'}}>Submit</button>
+    <button type="submit" class="btn btn-default" {{action 'addUser'}}  disabled={{didNotPass}}>Submit</button>
   </form>
 
 </div>

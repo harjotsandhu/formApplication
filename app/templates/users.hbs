@@ -3,9 +3,33 @@
     <div class="left-panel">
       <div class="panel-items" {{action 'addUser'}}>Add Contact</div>
       <div class="panel-items" {{action 'viewAllUsers'}}>List Contacts</div>
+      <div class="panel-items" {{action 'viewInstructions'}}>Instructions</div>
     </div>
   </div>
   <div class="col-md-10">
+    {{#if instructions}}
+    <div class="instruction-wrapper">
+      <div class="intro">
+        This app is built using a 3-tier modern web application struture. The front end is built using Ember.js, the middle-tier is a Restful service built using node and the
+         back-end consists of a PostgreSql Database. This is a real time data driven web application which allows the user to add contacts, display contacts, modify information
+         and delete contacts.
+      </div>
+      <div class="usage">
+        <h4>Instructions:</h4>
+        <span class="title">Add Contacts - </span> <span class="desc">To add contacts click on the "Add Contact" tile in the left panel. After filling out the information click on submit and a request to the database will be made to add an user. <br></span>
+        <span class="title">View Contacts - </span> <span class="desc">To view All contacts click on the "List contact" tile in the left panel <br> </span>
+        <span class="title">Modify Contacts - </span> <span class="desc"> Click on the "List contact" tile in the left panel. Click on the edit icon in the user-box to edit the information. This will take the user to another
+                            page where the information could be edited. After the editing is done, click on "Update" tile in the left panel that will make a put request to the database. <br></span>
+        <span class="title">Delete Contacts - </span> <span class="desc">*Click on the "List contact" tile in the left panel. Click on the trash icon in the user-box which you want to delete. This will send a delete request to the database.</span>
+      </div>
+      <div class="repository">
+        <span class="title">Front-End Git Repository</span><br>
+        <span class="link"><a href=https://github.com/harjotsandhu/formApplication target="_blank">https://github.com/harjotsandhu/formApplication</a></span><br>
+        <span class="title">Middle-tier Git Repository</span><br>
+        <span class="link"><a href=https://github.com/harjotsandhu/formAppMiddle target="_blank">https://github.com/harjotsandhu/formAppMiddle</a></span><br>
+      </div>
+    </div>
+    {{/if}}
     {{#if addUser}}
       {{add-user-form}}
     {{/if}}
